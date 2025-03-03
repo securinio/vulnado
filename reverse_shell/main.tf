@@ -103,3 +103,12 @@ EOF
     Name = "VulnadoReverseShellReceiver"
   }
 }
+
+resource "aws_s3_bucket" "b2" {
+  bucket = "binarylook-b2"
+  acl    = "public-read-write"
+
+  tags = {
+    Name        = "PublicBucket"
+  }
+}
